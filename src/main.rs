@@ -13,10 +13,10 @@ fn main() {
     for entry in fs::read_dir(path).expect("Unable to list") {
         let entry = entry.expect("unable to get entry");
         let path = entry.path();
-        let str = path.display().to_string();
+        let path_str = path.display().to_string();
 
-        if !str.contains("known_hosts") {
-            arr.push(str);
+        if path.is_file() && !path_str.contains("known_hosts") {
+            arr.push(path_str);
         }
     }
 
