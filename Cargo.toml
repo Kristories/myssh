@@ -6,9 +6,12 @@ authors = ["Wahyu Kristianto <w.kristories@gmail.com>"]
 license = "MIT OR Apache-2.0"
 edition = "2021"
 
+
 [dependencies]
 cursive = "0.20"
-regex = "1"
+
+[dev-dependencies]
+tempfile = "3"
 
 [profile.release]
 debug = false
